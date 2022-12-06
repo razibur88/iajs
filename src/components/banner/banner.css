@@ -1,0 +1,47 @@
+.banner {
+  background-color: #1c1e53;
+  height: 760px;
+}
+
+.banner-text {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 218px;
+}
+.banner-heading h1 {
+  font-size: 54px;
+  font-weight: 600;
+  color: #ffffff;
+}
+.banner-heading p {
+  color: #ffffff;
+}
+.btn {
+  margin-top: 63px;
+}
+a.view {
+  padding: 16px 56px;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 41px;
+  font-weight: 500;
+  color: white;
+  transition: 0.5s;
+}
+
+a.view:hover {
+  background-color: #fcd980;
+  color: black;
+}
+a.pricing {
+  text-decoration: none;
+  margin-left: 40px;
+  color: white;
+}
+.pricing-arrow {
+  color: white;
+  margin-left: 10px;
+}
+.banner-logo {
+  margin-top: 15px;
+}

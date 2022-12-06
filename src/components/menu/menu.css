@@ -1,0 +1,50 @@
+.container {
+  width: 1280px;
+  margin: 0 auto;
+}
+.nav {
+  width: 100%;
+  position: absolute;
+  background-color: #1c1e53;
+}
+.main {
+  display: flex;
+  justify-content: space-between;
+}
+.logo img {
+  margin-top: 32px;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+}
+.menu ul {
+  display: flex;
+  list-style: none;
+}
+.menu li a {
+  text-decoration: none;
+}
+.menu a {
+  padding: 0 16px;
+  font-weight: 500;
+  color: rgb(192, 191, 191);
+  text-decoration: none;
+}
+.menu a:hover {
+  color: white;
+}
+a.contact-us {
+  padding: 16px 48px;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 41px;
+  font-weight: 500;
+  margin-left: 48px;
+  color: white;
+  transition: 0.5s;
+}
+a.contact-us:hover {
+  background-color: #fcd980;
+}

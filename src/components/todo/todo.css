@@ -1,0 +1,53 @@
+.todomain {
+  padding-top: 100px;
+}
+.inputinner {
+  text-align: center;
+}
+.inputinner i {
+  height: 40px;
+  width: 40px;
+  background-color: tomato;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+.input {
+  margin: 10px 0;
+  background-color: transparent;
+  border: 2px solid gray;
+}
+.hhhh ul {
+  list-style: none;
+}
+.todomain ul li {
+  background-color: tomato;
+  padding: 10px 0;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+}
+.hhhh ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.hhhh .somee {
+  color: red;
+  position: absolute;
+  left: 92%;
+  top: 50%;
+  display: flex;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  color: #fff;
+  gap: 10px;
+  cursor: pointer;
+}
