@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import React, { useState } from "react";
 import Home from "./pages/Home";
 import Register from "./pages/Register";
 import Data from "./pages/Data";
@@ -17,10 +18,4 @@ function App() {
     </>
   );
 }
-
-let box = {
-  height: "300px",
-  width: "300px",
-  backgroundColor: "red",
-};
 export default App;

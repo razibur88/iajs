@@ -18,9 +18,16 @@
   cursor: pointer;
 }
 .input {
-  margin: 10px 0;
   background-color: transparent;
   border: 2px solid gray;
+  margin: 10px 0;
+}
+.edit {
+  background-color: transparent;
+  border: 2px solid gray;
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
 }
 .hhhh ul {
   list-style: none;

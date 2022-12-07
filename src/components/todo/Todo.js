@@ -16,8 +16,10 @@ import {
 const Todo = () => {
   let [todo, setTodo] = useState("");
   let [extra, setExtra] = useState([]);
-  // let [pretext, setPretext] = useState("");
-  // let [edittext, setEdittext] = useState("");
+  let [pretext, setPretext] = useState(false);
+  let [edittext, setEdittext] = useState("");
+  let [todoid, setTodoid] = useState("");
+  let [todovalue, setTodovalue] = useState("");
   const db = getDatabase();
 
   let handleinput = (e) => {
@@ -46,13 +48,27 @@ const Todo = () => {
     remove(ref(db, "todo/" + id));
   };
 
+  let handleEdit = (id, value) => {
+    setPretext(!pretext);
+    setTodoid(id);
+    setTodovalue(value);
+  };
+
+  let handleUpdate = (e) => {
+    setEdittext(e.target.value);
+  };
+
+  let handleFinalUpdate = (id, value) => {
+    update(ref(db, "todo/" + value), {
+      todo: id,
+    }).then(() => {
+      setPretext(false);
+      console.log("update");
+    });
+  };
+
   // let handleEdit = (text, id) => {
   //   setPretext(text);
-  //   update(ref(db, "todo/" + id), {
-  //     todo: edittext,
-  //   }).then(() => {
-  //     console.log("update");
-  //   });
   // };
 
   return (
@@ -91,8 +107,9 @@ const Todo = () => {
                   <div className="somee">
                     <i
                       class="fa-solid fa-pen-to-square"
-                      // onClick={() => handleEdit(item.todo, item.key)}
+                      onClick={() => handleEdit(item.todo, item.key)}
                     ></i>
+                    {/* item.todo, item.key */}
                     <i
                       class="fa-solid fa-trash"
                       onClick={() => handledelete(item.key)}
@@ -101,6 +118,20 @@ const Todo = () => {
                 </li>
               </ul>
             ))}
+            {pretext ? (
+              <div>
+                <input
+                  onChange={handleUpdate}
+                  className="edit"
+                  placeholder="Edit"
+                />
+                <button onClick={() => handleFinalUpdate(edittext, todovalue)}>
+                  Update
+                </button>
+              </div>
+            ) : (
+              ""
+            )}
           </Col>
         </Row>
       </Container>
